@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: rgb(85, 70, 92);
+    color: white;
+}
+.header {
+    background-color:rgb(71, 32, 88);
+    padding: 20px ;
+    display: flex;
+    justify-content:space-between;
+    text-align: ;
+}
+.header h1{
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 3em;
+}
+.header .login a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 30px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+.header .login i{
+    color: white;
+    font-size: 28px;
+    margin-top: 15px;
+}
+.header .login i:hover{
+    transform: scale(1.1);
+}
+main {
+    width: 75%;
+    height: 70vh;
+    margin: 20px auto;
+    background-color: rgb(99, 75, 116);
+}
+.upper-main {
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+main .search{
+    padding: 20px;
+}
+main .search form input{
+    padding: 10px;
+    border-radius: 7px;
+    height: 40px;
+}
+main .search form input[type=text]{
+    width: 70%;
+}
+main .search form input[type=submit]{
+    background-color: rgb(166, 40, 204);
+    color: white;
+    font-weight: 600;
+}
+main .search form input[type=submit]:hover{
+    background-color: rgb(102, 19, 150);
+}
+main .add-task {
+    padding: 20px;
+    width: 30px;
+}
+main .add-task a img{
+    width: 40px;
+    transition: 0.7s ease;
+}
+main .add-task a img:hover{
+    transform: scale(1.2);
+}
+.task{
+    width: 75%;
+    background-color: rgb(222, 184, 240);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 2px 1px 1px rgb(232, 194, 247);
+    display: flex;
+    justify-content: space-between;
+    transition: 0.7s ease;
+}
+.task:hover{
+    background-color:azure;
+}
+main .tasks .task a{
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.4em;
+}
+.task .delete-icon a img{
+    width: 30px;  
+}
+.task .delete-icon a img:hover{
+    transform: scale(1.2);
+}
+.empty {
+    text-align: center;
+    font-size: 30px;
+}
+footer{
+    background-color: rgb(71, 32, 88);
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    padding: 15px;
+    font-size: 16px;
+}
+footer p i{
+    color: rgb(248, 166, 166);
+}

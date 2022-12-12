@@ -1,0 +1,38 @@
+{% extends "task/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+    {% if request.user.is_authenticated %}
+    <div class="upper-main">
+        <div class="search">
+            <form method="get">
+                <input type="text" placeholder="Search your tasks" name="search" value='{{search_input}}'>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <div class="add-task">
+            <a href="{% url 'create' %}"><img src="{% static 'img/plus_icon.png' %}" alt="Add task icon"></a>
+        </div>
+    </div> 
+    <hr>
+    <div class="tasks">
+        {% if tasks %}
+        {% for task in tasks %}
+            <div class="task">
+                <div class="task-name">
+                    <a href="{% url 'update' task.id %}">{{task}}</a>
+                </div>
+                <div class="delete-icon">
+                    <a href="{% url 'delete' task.id %}"><img src="{% static 'img/x_icon.png' %}" alt=""></a>
+                </div>  
+            </div>
+        {% endfor %}  
+        {% else %}
+            <p class="empty"> there is no tasks </p>
+        {% endif %}  
+    </div>
+    {% else %}
+        <a href='{% url 'login' %}'>Login</a>
+    {% endif %}
+</main>
+{% endblock content %}

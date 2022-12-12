@@ -1,0 +1,10 @@
+{% extends "task/base.html" %}
+{% load static %}
+{% block content %}
+<form method="POSt">
+    {% csrf_token %}
+    <h3> Are you sure you want to delete the task? </h3>
+    <input type="submit" value="Delete">
+</form>
+{% endblock content %}
+

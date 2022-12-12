@@ -1,0 +1,10 @@
+{% extends "task/base.html" %}
+{% load static %}
+{% block content %}
+<h1>add new task</h1>
+<form method="POST" action=''>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='Add Task'>
+</form>
+{% endblock content %}
