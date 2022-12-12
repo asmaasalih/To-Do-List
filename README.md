@@ -5,3 +5,4 @@ with login and create user account.
 - python
 - django
 
+![Home Page](static/img/homePage.PNG)
